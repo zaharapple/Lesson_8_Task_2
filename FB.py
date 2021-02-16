@@ -13,18 +13,14 @@ for line in f:
 
     for i in range(1, value3 + 1):
         if (i % fizz == 0) and (i % buzz == 0):
-            res.write('FB ')
-            print('FB ', end=" ")
+            print('FB', end=" ", file=res)
         elif i % fizz == 0:
-            res.write('F ')
-            print('F ', end=" ")
+            print("F", end=" ", file=res)
         elif i % buzz == 0:
-            res.write('B ')
-            print('B ', end=" ")
+            print('B', end=" ", file=res)
         else:
-            res.write(str(i) + ' ')
-            print(str(i), end=" ")
-    res.write('\n')
+            print(i, end=" ", file=res)
+    print("\n", end="", file=res)
 f.close()
 res.close()
 print('Everything is recorded in result.py')
